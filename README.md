@@ -5,9 +5,9 @@ This project uses phpdotenv, eloquent, klein.php, and filip/whoops.
 Setup: 
 
 1. Setup environment variables: 
-    ```bash 
-        cp .env.example .env
-    ``` 
+```bash 
+    $ cp .env.example .env
+``` 
 2. Edit .env. 
 
     ```Note the DB_ENGINE must be MyISAM if using mysql version less than 5.6 to support fulltext indexing.``` 
