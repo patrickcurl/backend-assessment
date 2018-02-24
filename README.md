@@ -43,6 +43,8 @@ The following routes are setup:
      * (GET) http://back.test/addresses/search/field/query
      * $field can be: zipcode or name, 
      * $query is what to match against, examples: 
+     * http://back.test/addresses/search/zipcode/84 => 84604, 84601, etc would match.
+     * http://back.test/addresses/search/name/ho => house, home, etc would match.
      */
     $route->respond('GET', '/addresses/search/[:field]/[:query]', [$addressController, 'search']);
 
