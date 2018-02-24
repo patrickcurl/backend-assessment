@@ -6,7 +6,7 @@ Setup:
 
 1. Setup environment variables: 
 ```bash 
-    $ cp .env.example .env
+$ cp .env.example .env
 ``` 
 2. Edit .env. 
 
