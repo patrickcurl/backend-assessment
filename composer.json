@@ -1,0 +1,14 @@
+{
+    "require": {
+        "klein/klein": "^2.1",
+        "filp/whoops": "^2.1",
+        "illuminate/database": "^5.6",
+        "vlucas/phpdotenv": "^2.4",
+        "robmorgan/phinx": "^0.9.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
