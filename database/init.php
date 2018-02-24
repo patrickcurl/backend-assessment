@@ -2,7 +2,6 @@
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 $capsule = new Capsule;
-// $dotenv->required(['DB_HOST', 'DB_NAME', 'DB_USER', 'DB_PASS']);
 $capsule->addConnection([
     'driver'    => 'mysql',
     'host'      => getenv('DB_HOST'),
@@ -13,3 +12,9 @@ $capsule->addConnection([
     'collation' => 'utf8_unicode_ci',
     'prefix'    => ''
 ]);
+
+// Make this Capsule instance available globally via static methods
+$capsule->setAsGlobal();
+
+// Setup the Eloquent ORM
+$capsule->bootEloquent();
