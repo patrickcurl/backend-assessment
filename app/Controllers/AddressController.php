@@ -9,11 +9,14 @@ class AddressController
      */
     public static function index($req, $resp)
     {
+        // set the response to format using json.
         $send = $req->param('format', 'json');
-        $resp->$send(Address::get());
+        // Pass all an Address object with all addresses to the response.
+        return $resp->$send(Address::get());
     }
 
     /**
+     * Add a new address.
      * @param $req
      * @param $resp
      * @param $service
@@ -56,16 +59,17 @@ class AddressController
         $send = $req->param('format', 'json');
 
         // Return the json response.
-        $resp->$send($return);
+        return $resp->$send($return);
     }
 
     /**
+     * Search for an Address.
      * @param $req
      */
     public static function search($req, $resp)
     {
         $addresses = Address::search($req->field, $req->query);
         $send      = $req->param('format', 'json');
-        $resp->$send($addresses);
+        return $resp->$send($addresses);
     }
 }
